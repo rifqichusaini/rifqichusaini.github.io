@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <title>M Rifqi Chusaini - form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 id="title">Portfolio Survey Form</h1>
+        <p id="description">Thank you for taking the time to help me improve my portfolio!</p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label for="name" id="name-label">Name</label>
+          <input id="name" type="text" placeholder="type your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email" id="email-label">Email</label>
+          <input id="email" type="email" placeholder="type your email" required>
+        </div>
+        <div class="form-group">
+          <label for="number" id="number-label">Age <span>(optional)</span></label>
+          <input id="number" type="number" placeholder="age" min="1" max="120">
+        </div>
+        <div class="form-group">
+          <label for="dropdown">What is your current role?</label>
+          <select id="dropdown" required>select an option
+            <option value="">select current role</option>
+            <option value="student">student</option>
+            <option value="full-time job">full-time job</option>
+            <option value="full-time learner">full-time learner</option>
+            <option value="prefer not to say">prefer not to say</option>
+            <option value="other">other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>What do you think about my portfolio?</label>
+          <label for="excellent"><input id="excellent" type="radio" name="rating" value="Excellent"> Excellent</label>
+          <label for="Normal"><input id="Normal" type="radio" name="rating" value="Normal"> Normal</label>
+          <label for="Bad"><input id="Bad" type="radio" name="rating" value="Bad"> Bad</label>
+        </div>
+        <div class="form-group">
+          <label for="fav-feature">What is your favorite feature of my portfolio?</label>
+          <select id="fav-feature" required>
+            <option value="">select an option</option>
+            <option value="UI/UX">UI/UX</option>
+            <option value="Design">Design</option>
+            <option value="Color">Color</option>
+            <option value="Font">Font</option>
+          </select> 
+        </div>
+        <div class="form-group">
+          <label>what would you like to see improved <span>(check all that apply)</span></label>
+          <label><input type="checkbox" value="UI/UX"> UI/UX</label>
+          <label><input type="checkbox" value="Design"> Design</label>
+          <label><input type="checkbox" value="Color"> Color</label>
+          <label><input type="checkbox" value="Font"> Font</label>
+        </div>
+        <div class="form-group">
+          <label for="comments">Any comments or suggestions?</label>
+          <textarea rows="3" cols="30" id="comments" placeholder="type your comment..."></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" id="submit" value="submit">submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

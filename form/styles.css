@@ -1,0 +1,85 @@
+/* linear-gradient(rgba(122, 118, 118, 0.7),rgba(51, 51, 51,0.7)),  */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(115rad, rgba(69, 69, 73, 0.815),rgba(26, 18, 18, 0.801)), url(https://img.freepik.com/free-photo/flat-lay-office-desk-assortment-with-empty-screen-tablet_23-2148707960.jpg?w=900&t=st=1693055742~exp=1693056342~hmac=6ea1705ba131b77be87a11af6406aba17f380d05c88ecbdfdd2ff98ab83ed701);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container{
+    margin: 2em auto;
+    padding-bottom: 2em;
+    box-sizing: border-box;
+    width: 75%;
+}
+@media(min-width:600px){
+    .container{
+        max-width: 700px;
+    }
+}
+#survey-form{
+    background-color:#333;
+    padding: 2em;
+    border-radius: 1.2em;
+}
+header{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    color: white;
+}
+#title{
+    font-size: 2em;
+}
+#description{
+    font-size: 1.1em;
+}
+.form-group{
+    font-weight: bold;
+    margin-bottom: 2em;
+    color: white;
+}
+span{
+    font-style: italic;
+    font-size: 0.8em;
+}
+label{
+    display:block;
+    margin-bottom: 0.5em;
+}
+#name, #email, #number, #fav-feature, #dropdown, #submit{
+    display: inline-block;
+    width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box;
+    border-radius: 0.4em;
+    border: 0;
+    height: 3em;
+}
+textarea{
+    padding: 0.5em;
+    box-sizing: border-box;
+    border-radius: 0.4em;
+    resize: vertical;
+    width: 100%;
+    min-height: 8em;
+}
+#submit{
+    color: white;
+    background-color: slategrey;
+    font-weight: inherit;
+}
+#submit:hover{
+    background-color: white;
+    color:slategray;
+    transition: .3s;
+}
