@@ -226,7 +226,8 @@ ul .harga{
 
 @media (max-width:900px) {
     #profile{
-        height: 49vh;
+        /* height: 49vh; */
+        height: 30%;
     }
     #profile .container{
         padding: 0 3em;
@@ -235,9 +236,10 @@ ul .harga{
         color: #FFFFFF;
         text-align: center;
         font-size: 1.2em;
+        margin-bottom: 1em;
     }
     #profile .container h4{  
-        margin-bottom: 2em;
+        margin-bottom: 1em;
         font-size:2em;
     }
     #project{
