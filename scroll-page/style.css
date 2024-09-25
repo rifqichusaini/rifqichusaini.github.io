@@ -691,7 +691,7 @@ h3.date-header{
     color:#f66;
     text-decoration:none
 }
-@media (min-width: 768px) {
+@media (min-width: 960px) {
     .high-text {
         color: white !important;
     }
