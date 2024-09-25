@@ -106,7 +106,7 @@
 #navbar-iframe{
     height:0;
     visibility:hidden;
-    display:none
+    display:none;
 }
 body{
     background:#000;
@@ -690,6 +690,14 @@ h3.date-header{
 #credit a:hover{
     color:#f66;
     text-decoration:none
+}
+@media (min-width: 768px) {
+    .high-text {
+        color: white !important;
+    }
+    .stop-text {
+        color: white !important; 
+    }
 }
 @media screen and (max-width:960px){
     .header-wrapper{
