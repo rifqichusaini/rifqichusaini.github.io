@@ -27,11 +27,11 @@
             var status=1; 
             var currentpos=0, alt=1, curpos1=0, curpos2=-1; 
             var color=new Array(); 
-            color[1]="#ddd"; 
-            color[2]="#ccc"; 
-            color[3]="#bbb"; 
-            color[4]="#aaa"; 
-            color[5]="#999"; 
+            color[1] = "rgba(221, 221, 221, 0.4)"; 
+            color[2] = "rgba(204, 204, 204, 0.4)"; 
+            color[3] = "rgba(187, 187, 187, 0.4)"; 
+            color[4] = "rgba(170, 170, 170, 0.4)"; 
+            color[5] = "rgba(153, 153, 153, 0.4)";
             var interval=new Array(400, 300, 200, 100, 30); 
             
             function scrollwindow(){
@@ -66,14 +66,17 @@
                     document.getElementById('speed' + i).style.backgroundColor=color[i];
                 }
                 for (i=1; i <=currentspeed; i++){
-                    document.getElementById('speed' + i).style.backgroundColor="#00cc00";
+                    document.getElementById('speed' + i).style.backgroundColor = "rgba(0, 204, 0, 0.3)";
+
                 }
             }
             function changeBg(n){
                 for (i=1; i <=5; i++){
                     document.getElementById('speed' + i).style.backgroundColor=color[i];
-                } for (i=1; i <=n; i++){
-                    document.getElementById('speed' + i).style.backgroundColor="#00cc00";
+                } 
+                for (i=1; i <=n; i++){
+                    document.getElementById('speed' + i).style.backgroundColor = "rgba(0, 204, 0, 0.3)";
+
                 }
             } 
             function tooglespeed(){
@@ -139,11 +142,11 @@
             <div id="speednav" style="background: rgba(66, 66, 66, 0); padding: 10px; float: right; width: 24px; height: 170px;">
                 <ul>
                     <li class="high-text" style="list-style-type:none;border:0px;width:20px;margin-left:-40px;font-family:arial;font-size:7pt;color:rgba(0,0,0,0.3);text-align:center;">high</li>
-                    <li class="speedbar" id="speed5" onclick="startit(5);" onmouseout="resetBg();" onmouseover="this.style.cursor='pointer';changeBg(5);" style="background: rgba(153, 153, 153, .3); width: 20px; cursor: pointer;"></li>
-                    <li class="speedbar" id="speed4" onclick="startit(4);" onmouseout="resetBg();" onmouseover="this.style.cursor='pointer';changeBg(4);" style="background: rgba(170, 170, 170, .3); width: 20px; cursor: pointer;"></li>
-                    <li class="speedbar" id="speed3" onclick="startit(3);" onmouseout="resetBg();" onmouseover="this.style.cursor='pointer';changeBg(3);" style="background: rgba(187, 187, 187, .3); width: 20px; cursor: pointer;"></li>
-                    <li class="speedbar" id="speed2" onclick="startit(2);" onmouseout="resetBg();" onmouseover="this.style.cursor='pointer';changeBg(2);" style="background: rgba(204, 204, 204, .3); width: 20px; cursor: pointer;"></li>
-                    <li class="speedbar" id="speed1" onclick="startit(1);" onmouseout="resetBg();" onmouseover="this.style.cursor='pointer';changeBg(1);" style="background: rgba(221, 221, 221, .3); width: 20px; cursor: pointer;"></li>
+                    <li class="speedbar" id="speed5" onclick="startit(5);" onmouseout="resetBg();" onmouseover="this.style.cursor='pointer';changeBg(5);" style="background: rgba(153, 153, 153, .3); width: 20px; cursor: pointer; border-color: rgba(204, 204, 204, 0.3);"></li>
+                    <li class="speedbar" id="speed4" onclick="startit(4);" onmouseout="resetBg();" onmouseover="this.style.cursor='pointer';changeBg(4);" style="background: rgba(170, 170, 170, .3); width: 20px; cursor: pointer; border-color: rgba(204, 204, 204, 0.3);"></li>
+                    <li class="speedbar" id="speed3" onclick="startit(3);" onmouseout="resetBg();" onmouseover="this.style.cursor='pointer';changeBg(3);" style="background: rgba(187, 187, 187, .3); width: 20px; cursor: pointer; border-color: rgba(204, 204, 204, 0.3);"></li>
+                    <li class="speedbar" id="speed2" onclick="startit(2);" onmouseout="resetBg();" onmouseover="this.style.cursor='pointer';changeBg(2);" style="background: rgba(204, 204, 204, .3); width: 20px; cursor: pointer; border-color: rgba(204, 204, 204, 0.3);"></li>
+                    <li class="speedbar" id="speed1" onclick="startit(1);" onmouseout="resetBg();" onmouseover="this.style.cursor='pointer';changeBg(1);" style="background: rgba(221, 221, 221, .3); width: 20px; cursor: pointer; border-color: rgba(204, 204, 204, 0.3);"></li>
                     <li class="speedbar stop-text" onclick="stopit();" onmouseover="this.style.cursor='pointer';" style="font-family: arial; font-size: 7pt; border-color: rgba(204, 204, 204, 0); color: rgba(0, 0, 0, .3); text-align: center; width: 20px; height: 12px; cursor: pointer;">stop</li>
                 </ul>
             </div>
