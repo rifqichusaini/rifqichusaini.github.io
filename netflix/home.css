@@ -1,0 +1,65 @@
+/* Container */
+.billboard-links {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Jarak antara tombol */
+  }
+  
+  /* Tombol Utama (Putar) */
+  .billboard-links .color-primary {
+    background-color: #e50914; /* Warna merah yang mencolok */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .billboard-links .color-primary:hover {
+    background-color: #b20710;
+    transform: scale(1.05); /* Efek memperbesar sedikit */
+  }
+  
+  /* Tombol Sekunder (Selengkapnya) */
+  .billboard-links .color-secondary {
+    background-color: #333;
+    color: #ffffff;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .billboard-links .color-secondary:hover {
+    background-color: #444;
+    border-color: #555;
+  }
+  
+  /* Ikon SVG */
+  .billboard-links svg {
+    fill: currentColor; /* Agar ikon mengikuti warna teks */
+    margin-right: 8px;
+  }
+  
+  /* Label Teks */
+  .billboard-links span {
+    font-weight: bold;
+  }
+  
+  /* Spasi dan Rata Tengah */
+  .ltr-1npqywr {
+    width: 8px; /* Ukuran spasi antar ikon dan teks */
+  }
+  
+  .ltr-1st24vv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
