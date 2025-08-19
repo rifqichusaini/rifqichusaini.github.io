@@ -3,88 +3,450 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
+    <title>RIFQI CHUSAINI - SECURITY ENGINEER</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.js"></script>
 </head>
 <body>
-    <div id="navbar">
-        <a href="#home" class="logo">Muchammad Rifqi Chusaini S</a>
-        <ul>
-            <li class="Home">
-                <a href="#home">Home</a>
-            </li>
-            <li class="Profile">
-                <a href="#profile">Profile</a>
-            </li>
-            <li class="Project">
-                <a href="#project">Project</a>
-            </li>
-            <li class="Contact">
-                <a href="#footer">Contact</a>
-            </li>
-        </ul>
+    <div class="matrix-bg">
+        <canvas class="matrix-canvas" id="matrixCanvas"></canvas>
     </div>
-    <div id="home" class="section">
-        <div class="intro">
-            <h4>Hi! my name is</h4>
-            <h1>Muchammad Rifqi Chusaini S</h1>
-            <p>Internet Engineering Student of <a href="https://tri.sv.ugm.ac.id/" target="_blank">Gadjah Mada University</a></p>            
-            <a id="email" href="mailto:muchammadrifqichusainis@mail.ugm.ac.id" target="_blank">Contact Me</a>
+    <div class="glitch-bg"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    
+    <nav>
+        <div class="nav-container">
+            <div class="logo">R1FQ1_CH7S41N1</div>
+            <ul class="nav-links">
+                <li><a href="#about">PROFILE</a></li>
+                <li><a href="#exploits">EXPERIENCE</a></li>
+                <li><a href="#intel">ABOUT ME</a></li>
+                <li><a href="#arsenal">SKILLS</a></li>
+                <li><a href="#achievements">ACHIEVEMENTS</a></li>
+            </ul>
         </div>
-        <img src="img/kiki2.png" width="200px">
-    </div>
-    <div id="profile" class="section">
-        <div class="container">
-            <h4>Who Am I ?</h4>
-            <p>I'm a freshman internet engineering student at Gadjah Mada University, graduated from senior high school in science major, I've organization experience in IT Development division, and I've interest in IT especially cyber security. Besides that I also have a hobby of learning new things because I believe that nothing is wasted in learning something.</p>
-            <!-- <p>I'm a beginner and still learning</p> -->
-        </div>
-    </div>
-    <div id="project" class="section">
-        <div class="container">
-            <div class="kolom satu">
-                <img src="img/icon1.png">
-                <h1>Landing Page</h1>
-                <ul>
-                    <li id="center">front-end example of a PS landing page, made only from HTML5 and CSS3.</li>
-                    <!-- <li class="harga">Rp 200.000</li> -->
-                </ul>
-                <a target="_blank" href="landing_page/index.html" >See Details</a>
-            </div>
-            <div class="kolom dua">
-                <img src="img/icon2.png">
-                <h1>Formulir</h1>
-                <ul>
-                    <li id="center">portfolio feedback form as well as one of the projects, please visit if you want to give feedback, made only with HTML5 and CSS3.</li>
-                    <!-- <li class="harga">Rp 50.000</li> -->
-                </ul>
-                <a target="_blank" href="form/index.html">Look More</a>
-            </div>
-            <div class="kolom tiga">
-                <img src="img/icon3.png">
-                <h1>Login Page</h1>
-                <ul>
-                    <li id="center">an example of a front-end sign-in page made only from HTML5 and CSS3.</li>
-                    <!-- <li class="harga">Rp 100.000</li> -->
-                </ul>
-                <a target="_blank" href="login/index.html">Visits</a>
-            </div>
-        </div>
-    </div>
-    <div id="footer" class="section">
-        <a href="https://www.linkedin.com/in/muchammad-rifqi-chusaini/">
-            <box-icon type='logo' name='linkedin-square' size="2em" color="#1D68A2"></box-icon>
-            <p>linkedin</p>
-        </a>
-        <a href="https://instagram.com/rifqichusaini_">
-            <box-icon name='instagram-alt' type='logo' size="2em" color="#DD2A7B"></box-icon>
-            <p>instagram</p>
-        </a>
-    </div>
+    </nav>
 
+    <main>
+        <!-- Hero Section -->
+        <section class="hero section" id="about">
+            <div class="container">
+                <div class="profile-container">
+                    <div class="profile-placeholder" id="profilePhoto">
+                    </div>
+                </div>
+                <h1 class="typing-text">RIFQI CHUSAINI</h1>
+                <!-- <p class="subtitle">INTERNET ENGINEERING • SECURITY RESEARCHER • CYBER WARFARE SPECIALIST</p> -->
+                <p class="subtitle">INTERNET ENGINEERING • SECURITY RESEARCHER</p>
+                <p style="color: var(--accent-orange); font-family: 'JetBrains Mono', monospace; margin-bottom: 2rem;">📍 YOGYAKARTA, INDONESIA</p>
+                
+                <div class="contact-matrix">
+                    <a href="mailto:mrifqichusainis@gmail.com" class="contact-node hack-card">
+                        <img src="https://i.ibb.co.com/fzt5dvDV/gmail.png" alt="gmail" border="0" class="icon">
+                        <span>CONTACT_ME</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/muchammad-rifqi-chusaini/" target="_blank" class="contact-node hack-card">
+                        <img src="https://i.ibb.co.com/mCwNfqfs/linkedin.png" alt="linkedin" border="0" class="icon">
+                        <span>LINKEDIN_PROFILE</span>
+                    </a>
+                </div>
 
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="terminal-title">SYSTEM_PROFILE.sh</div>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="command-line">
+                            <span class="prompt">root@rifqi:~$</span>
+                            <span class="command">cat profile.txt</span>
+                        </div>
+                        <div class="output">
+                            Internet Engineering student at Universitas Gadjah Mada with interest in 
+                            penetration testing and malware development. Specialized in OWASP-based web security 
+                            testing with proven track record in vulnerability research and exploitation.
+                        </div>
+                        <div class="command-line">
+                            <span class="prompt">root@rifqi:~$</span>
+                            <span class="command">whoami</span>
+                        </div>
+                        <div class="output">MALWARE_DEV | PENETRATION_TESTER | RESEARCHER</div>
+                        <div class="command-line">
+                            <span class="prompt">root@rifqi:~$</span>
+                            <span style="color: var(--accent-green);">█</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exploits (Work Experience) -->
+        <section class="section" id="exploits">
+            <div class="container">
+                <div class="section-header">
+                    <h2>EXPERIENCE</h2>
+                    <p>Real-world penetration testing and security assessments</p>
+                </div>
+
+                <div class="hack-card">
+                    <h3>SECURITY ENGINEER</h3>
+                    <h4>PT. OTSKYR SEMBAGI MANDARA NAWASENA</h4>
+                    <p class="meta">OPERATION_PERIOD: JAN_2024 → APR_2024 | LOCATION: YOGYAKARTA_BASE</p>
+                    
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <div class="terminal-title">MISSION_OBJECTIVES.log</div>
+                        </div>
+                        <div class="terminal-content">
+                            <div class="command-line">
+                                <span class="prompt">exploit@otskyr:~$</span>
+                                <span class="command">cat missions_completed.txt</span>
+                            </div>
+                            <ul style="margin-left: 1rem; margin-top: 1rem;">
+                                <li>>>> Executed real-world penetration testing using OWASP-WSTG protocols</li>
+                                <li>>>> Generated comprehensive vulnerability reports with exploit POCs</li>
+                                <li>>>> Conducted security assessments for high-value client infrastructures</li>
+                            </ul>
+                            <div class="command-line" style="margin-top: 1rem;">
+                                <span class="prompt">exploit@otskyr:~$</span>
+                                <span class="output" style="color: var(--accent-green);">MISSION_STATUS: COMPLETED_SUCCESSFULLY</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intelligence (Education & Organizations) -->
+        <section class="section" id="intel">
+            <div class="container">
+                <div class="section-header">
+                    <h2>A GLIMPSE OF ME</h2>
+                    <p>Academic training and operational experience</p>
+                </div>
+
+                <div class="grid">
+                    <div class="hack-card">
+                        <h3>EDUCATION</h3>
+                        <h4>UNIVERSITAS GADJAH MADA</h4>
+                        <p class="meta">D4_INTERNET_ENGINEERING | AUG_2025 → PRESENT</p>
+                        <ul>
+                            <li>>>> Active participated in group disscussion</li>
+                            <li>>>> Planning and executed design logo team</li>
+                            <li>>>> Staff of PDD in UGM Pioneer Action Plan at Kertanegara 11</li>
+                        </ul>
+                    </div>
+
+                    <div class="hack-card">
+                        <h3>ORGANIZATION</h3>
+                        <h4>JOGJA CYBER SECURITY</h4>
+                        <p class="meta">DESIGN_DIVISION_LEADER | DEC_2024 → PRESENT</p>
+                        <ul>
+                            <li>>>> Inisiate design for JCS merch</li>
+                            <li>>>> Coordinated cyber security awareness campaigns</li>
+                            <li>>>> Implemented operational design for JCS social media</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="hack-card">
+                    <h3>UNMANNED AERIAL VEHICLE DEVELOPMENT</h3>
+                    <h4>ROBOTIC DEVELOPMENT COMMUNITY</h4>
+                    <p class="meta">UAV_SPECIALIST | JAN_2024 → PRESENT</p>
+                    
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <div class="terminal-title">UAV_OPERATIONS.log</div>
+                        </div>
+                        <div class="terminal-content">
+                            <ul>
+                                <li>>>> Telemetry antenna optimization using copper wire configurations</li>
+                                <li>>>> Flight Controller programming and serial port manipulation</li>
+                                <li>>>> Ground Control System operations during KRTI competition</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Arsenal (Research) -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>RESEARCH & DEVELOPMENT</h2>
+                    <p>Advanced algorithms and vulnerability research</p>
+                </div>
+
+                <div class="grid">
+                    <div class="hack-card">
+                        <h3>PATHFINDING ALGORITHM</h3>
+                        <p class="meta">ACTIVE_PROJECT | JUL_2025 → PRESENT</p>
+                        <h4>A* OPTIMIZATION FOR CAMPUS INFILTRATION ROUTES</h4>
+                        <ul>
+                            <li>>>> Implemented A* search algorithm for optimal route calculation</li> 
+                            <li>>>> Developed weighted graph structures for tactical pathfinding</li>
+                            <li>>>> Euclidean Distance heuristic for enhanced computational efficiency</li>
+                        </ul>
+                    </div>
+
+                    <div class="hack-card">
+                        <h3>VULNERABILITY RESEARCH</h3>
+                        <p class="meta">COMPLETED_OPERATION | JUN_2023</p>
+                        <h4>BROKEN ACCESS CONTROL EXPLOITATION</h4>
+                        <ul>
+                            <li>>>> Conducted black box penetration testing on university systems</li>
+                            <li>>>> Identified critical API misconfigurations and bypass techniques</li>
+                            <li>>>> Successfully demonstrated horizontal and vertical privilege escalation</li>
+                            <li>>>> Discovered payment process bypass and unauthorized data access</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Arsenal (Skills) -->
+        <section class="section" id="arsenal">
+            <div class="container">
+                <div class="section-header">
+                    <h2>SKILLS</h2>
+                    <p>Tools, techniques, and ability skills</p>
+                </div>
+
+                <div class="skills-matrix">
+                    <div class="skill-terminal">
+                        <div class="skill-header">
+                            <h4>EXPLOITATION</h4>
+                        </div>
+                        <div class="skill-content">
+                            <div class="skill-item">
+                                <span class="skill-name">OWASP-WSTG</span>
+                                <span class="skill-level">[BASIC]</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">PENETRATION_TESTING</span>
+                                <span class="skill-level">[BASIC]</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">REVERSE_ENGINEERING</span>
+                                <span class="skill-level">[BASIC]</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">MALWARE_ANALYSIS</span>
+                                <span class="skill-level">[BASIC]</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-terminal">
+                        <div class="skill-header">
+                            <h4>PROGRAMMING</h4>
+                        </div>
+                        <div class="skill-content">
+                            <div class="skill-item">
+                                <span class="skill-name">C++</span>
+                                <span class="skill-level">[INTERMEDIATE]</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">PYTHON</span>
+                                <span class="skill-level">[INTERMEDIATE]</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">HTML/CSS/JS</span>
+                                <span class="skill-level">[INTERMEDIATE]</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">LINUX</span>
+                                <span class="skill-level">[INTERMEDIATE]</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-terminal">
+                        <div class="skill-header">
+                            <h4>DESIGN</h4>
+                        </div>
+                        <div class="skill-content">
+                            <div class="skill-item">
+                                <span class="skill-name">UI/UX_DESIGN</span>
+                                <span class="skill-level">[BASIC]</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">ADOBE_ILLUSTRATOR</span>
+                                <span class="skill-level">[ADVANCED]</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">FIGMA</span>
+                                <span class="skill-level">[INTERMEDIATE]</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">GRAPHIC_DESIGN</span>
+                                <span class="skill-level">[ADVANCED]</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-terminal">
+                        <div class="skill-header">
+                            <h4>SYSTEM OPERATIONS</h4>
+                        </div>
+                        <div class="skill-content">
+                            <div class="skill-item">
+                                <span class="skill-name">FRONTEND_DEV</span>
+                                <span class="skill-level">[INTERMEDIATE]</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">MALWARE_DEV</span>
+                                <span class="skill-level">[BASIC]</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">NETWORK_INFRA</span>
+                                <span class="skill-level">[BASIC]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hack-card">
+                    <h3>PROJECTS</h3>
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <div class="terminal-title">ACTIVE_PROJECTS.list</div>
+                        </div>
+                        <div class="terminal-content">
+                            <div class="command-line">
+                                <span class="prompt">projects@rifqi:~$</span>
+                                <span class="command">ls -la deployed/</span>
+                            </div>
+                            <div class="output" style="margin-top: 1rem;">
+                                <div style="margin-bottom: 1rem;">
+                                    <span style="color: var(--accent-green);">🌐 PORTFOLIO_WEBSITE.exe</span><br>
+                                    <span style="color: var(--text-secondary); margin-left: 2rem;">└── Modern cybersecurity portfolio with hacker aesthetics</span>
+                                </div>
+                                <div style="margin-bottom: 1rem;">
+                                    <span style="color: var(--accent-cyan);">💾 DATABASE_APP_CPP.beta</span><br>
+                                    <span style="color: var(--text-secondary); margin-left: 2rem;">└── High-performance database management system</span>
+                                </div>
+                                <div>
+                                    <span style="color: var(--accent-orange);">📱 PROJECT_MGMT_PROTO.fig</span><br>
+                                    <span style="color: var(--text-secondary); margin-left: 2rem;">└── Advanced project management interface prototype</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section class="section" id="achievements">
+            <div class="container">
+                <div class="section-header">
+                    <h2>MISSION ACCOMPLISHED</h2>
+                    <p>Notable achievements and recognitions</p>
+                </div>
+
+                <div class="hack-card">
+                    <h3>🏆 NATIONAL RECOGNITION</h3>
+                    <h4>KRTI FINALIST - INDONESIAN FLYING ROBOT CONTEST</h4>
+                    <p class="meta">ACHIEVEMENT_DATE: SEP_2024 | CLASSIFICATION: NATIONAL_LEVEL</p>
+                    
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <div class="terminal-title">ACHIEVEMENT_REPORT.log</div>
+                        </div>
+                        <div class="terminal-content">
+                            <div class="command-line">
+                                <span class="prompt">achievement@krti:~$</span>
+                                <span class="command">cat competition_results.txt</span>
+                            </div>
+                            <div class="output" style="margin-top: 1rem;">
+                                STATUS: FINALIST_POSITION_ACHIEVED<br>
+                                COMPETITION_LEVEL: NATIONAL<br>
+                                TECHNICAL_FOCUS: UAV_DEVELOPMENT & PROGRAMMING<br>
+                                SKILLS_DEMONSTRATED: FLIGHT_CONTROL, TELEMETRY, GCS_OPERATIONS
+                            </div>
+                            <div class="command-line" style="margin-top: 1rem;">
+                                <span class="prompt">achievement@krti:~$</span>
+                                <span style="color: var(--accent-green);">MISSION_STATUS: ACCOMPLISHED</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hack-card">
+                    <h3>📜 VOLUNTEER OPERATIONS</h3>
+                    <div class="grid">
+                        <div>
+                            <h4>INFORMATICS CONGRESS 2023</h4>
+                            <p class="meta">PUBLICATION & DOCUMENTATION DIVISION</p>
+                            <ul>
+                                <li>>>> Designed official event identity and branding</li>
+                                <li>>>> Coordinated multimedia documentation operations</li>
+                                <li>>>> Enhanced participant experience through visual design</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>DAHLAN MUDA MENGABDI</h4>
+                            <p class="meta">COMMUNITY EMPOWERMENT PROGRAM</p>
+                            <ul>
+                                <li>>>> Youth leadership and social responsibility initiatives</li>
+                                <li>>>> Community development strategy implementation</li>
+                                <li>>>> Local societal challenge resolution</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-ascii">
+██████╗ ██╗███████╗ ██████╗ ██╗    ██████╗██╗  ██╗██╗   ██╗███████╗ █████╗ ██╗███╗   ██╗██╗
+██╔══██╗██║██╔════╝██╔═══██╗██║   ██╔════╝██║  ██║██║   ██║██╔════╝██╔══██╗██║████╗  ██║██║
+██████╔╝██║█████╗  ██║   ██║██║   ██║     ███████║██║   ██║███████╗███████║██║██╔██╗ ██║██║
+██╔══██╗██║██╔══╝  ██║▄▄ ██║██║   ██║     ██╔══██║██║   ██║╚════██║██╔══██║██║██║╚██╗██║██║
+██║  ██║██║██║     ╚██████╔╝██║██╗╚██████╗██║  ██║╚██████╔╝███████║██║  ██║██║██║ ╚████║██║
+╚═╝  ╚═╝╚═╝╚═╝      ╚══▀▀═╝ ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚═╝
+                </div>
+                <p>&copy; 2025 RIFQI_CHUSAINI_SECURITY_OPERATIONS. ALL_RIGHTS_RESERVED.</p>
+                <p style="margin-top: 1rem; color: var(--accent-green);">
+                    "In a world of locks, be the key. In a world of keys, be the lock picker."
+                </p>
+                <div style="margin-top: 2rem; color: var(--accent-red); font-size: 0.9rem;">
+                    [WARNING] This portfolio demonstrates ethical hacking capabilities for educational and defensive purposes only.
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
-
 </html>
